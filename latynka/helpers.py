@@ -1,7 +1,7 @@
 from latynka.romanizer import Romanizer
 
 
-def romanize(text: str) -> str:
+def convert(text: str) -> str:
     """
     Takes in a Ukrainian text in cyrillic and converts it to latin (romanizes, makes into latynka)
 

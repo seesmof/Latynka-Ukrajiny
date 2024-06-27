@@ -1,4 +1,5 @@
-from latynka.helpers import romanize
+from latynka.helpers import convert
+from latynka.romanizer import Romanizer
 
 
 def run_tests() -> None:
@@ -17,8 +18,8 @@ def run_tests() -> None:
 
     for test_input, test_output in tests_data:
         assert (
-            romanize(test_input) == test_output
-        ), f"{test_input=}\n{romanize(test_input)=}\n{test_output=}"
+            convert(test_input) == test_output == Romanizer(test_input).romanize()
+        ), f"{test_input=}\n{convert(test_input)=}\n{test_output=}"
 
     print(
         "All tests passed! Hallelujah thank YOU Jesus Christ our Holy Lord GOD Almighty"
