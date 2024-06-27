@@ -11,15 +11,14 @@ contains a python library that takes in a Ukrainian text in cyrillic alphabet an
 
 all by the Amazing Grace of Jesus Christ our Holy Lord GOD Almighty for His Glory ✝️💗🙏🏼
 
-### how to use
-#### `convert` function
-##### in short
+### package usage
+#### in short
 just use `convert(your_text)`, this will return your text in latin
 
-##### in detail
+#### in detail
 the main function of the library is pretty much `convert`. it takes in a Ukrainian text in cyrillic alphabet and converts it into latin (romanizes, makes into latynka)
 
-###### `convert` function
+##### `convert` function
 you use the `convert` method by simply passing to it a string, which will be converted into latin and returned back to you ✝️🙏🏼
 
 ```python
@@ -38,7 +37,7 @@ convert("СЛАВА НАВІКИ БОГУ СВЯТОМУ ІСУСУ ХРИСТУ
 SLAVA NAVIKY BOGU SVJATOMU ISUSU HRYSTU NAŠOMU GOSPODU I SPASYTELJU, Amin' i AMIN'! JIŽAK ta Jižak abo jižak
 ```
 
-###### `Romanizer` class
+##### `Romanizer` class
 you can also use the underlying class called `Romanizer` that the `convert` function uses. it contains a method called `romanize` that performs the latynkification process and returns the result back to you ✝️🙏🏼
 
 ```python
@@ -51,7 +50,7 @@ JEDYNYJ BOG ISUS HRYSTOS Svjatyj GOSPOD' i Spasytel'
 
 the `Romanizer` class's constructor takes in the same Ukrainian cyrillic text string and the `romanize` method converts it into latin
 
-### usage examples
+##### usage examples
 ```python
 from latynka import convert, Romanizer
 
