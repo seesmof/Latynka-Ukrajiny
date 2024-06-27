@@ -76,3 +76,13 @@ class Romanizer:
 
         with open(concordance_file_path, "r", encoding="utf-8") as concordance_file:
             self.concordance = json.load(concordance_file)
+
+    def set_text(self, text: str) -> None:
+        """
+        Set internal text given the input text
+
+        < text: str
+            Ukrainian text in cyrillic
+        """
+
+        self.text = text
