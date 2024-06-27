@@ -83,7 +83,7 @@ the romanization system was taken from Maks Prudeus: [the original video](https:
 
 its pretty much the system from [NaČasi](https://nachasi.com/manifest/), but
 - use `JI` in place of `Ї` 
-- use apostrophe sign in place of `Ь` and `'`
+- use apostrophe `'` sign in place of `Ь` and `'`
 - a different `Ĝ` in place of `Ґ`
 
 full letters concordance can be found at `./latynka/concordance.json`
