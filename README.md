@@ -89,6 +89,8 @@ its pretty much the system from [NaČasi](https://nachasi.com/manifest/), but
 
 full letters concordance can be found at `./latynka/concordance.json`
 
+the initial `.JSON` concordance schema was taken [from here](https://github.com/paiv/latynka/blob/main/src/data/bundled_tables/nachasi.json) ✝️💓 GOD bless you brother, i pray and hope you dont mind
+
 ### use online
 the app is [freely available](https://latynka.vercel.app/) to use on the internet. it has a neat interface, glory to Jesus Christ our Holy Lord GOD Almighty, here is how it looks:
 [![praise Jesus Christ our Holy Lord GOD Almighty](https://i.imgur.com/3aZuXvO.png)](https://latynka.vercel.app/)
