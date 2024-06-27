@@ -4,6 +4,18 @@ import json
 
 class Romanizer:
     def __init__(self, text: str = ""):
+        """
+        < text: str
+            Ukrainian text in cyrillic
+
+        > text: str
+            internal text, set to text parameter
+        > output: str
+            output text, stores converted text
+        > concordance: dict
+            loaded letters concordance
+        """
+
         self.text: str = text
         self.output: str = ""
         self.concordance: dict = {}
