@@ -16,10 +16,10 @@ def run_tests() -> None:
         ("ЄДИНИЇ", "JEDYNYJI"),
     ]
 
-    for test_input, test_output in tests_data:
+    for test_input, test_check in tests_data:
         assert (
-            convert(test_input) == test_output == Romanizer(test_input).romanize()
-        ), f"{test_input=}\n{convert(test_input)=}\n{test_output=}"
+            convert(test_input) == test_check == Romanizer(test_input).romanize()
+        ), f"{test_input=}\n{convert(test_input)=}\n{test_check=}"
 
     print(
         "All tests passed! Hallelujah thank YOU Jesus Christ our Holy Lord GOD Almighty"
