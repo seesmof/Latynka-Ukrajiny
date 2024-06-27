@@ -70,7 +70,9 @@ class Romanizer:
         """
 
         current_dir: str = os.path.dirname(os.path.abspath(__file__))
-        concordance_file_path: str = os.path.join(current_dir, "concordance.json")
+        concordance_file_path: str = os.path.join(
+            current_dir, "..", "data", "concordance.json"
+        )
 
         with open(concordance_file_path, "r", encoding="utf-8") as concordance_file:
             self.concordance = json.load(concordance_file)
