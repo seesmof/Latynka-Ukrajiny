@@ -21,12 +21,32 @@ class Romanizer:
             Ukrainian text in latin
         """
 
-        for char in self.text:
+        for index, char in enumerate(self.text):
             if char.lower() in self.concordance:
+                converted_letter: str = self.concordance[char.lower()]
                 if char.islower():
-                    self.output += self.concordance[char.lower()].lower()
-                else:
-                    self.output += self.concordance[char.lower()].upper()
+                    self.output += converted_letter.lower()
+                elif char.isupper():
+                    # if it's not the last letter
+                    if index < len(self.text) - 1:
+                        # look at the next letter
+                        next_letter: str = self.text[index + 1]
+                        # if the letter is lowercase, then capitalize only the first letter of our converted_letter; otherwise capitalize the whole converted_letter
+                        self.output += (
+                            converted_letter.title()
+                            if next_letter.islower()
+                            else converted_letter.upper()
+                        )
+                    # if it is the last letter
+                    else:
+                        # same as above
+                        previous_letter: str = self.text[index - 1]
+                        # only now we're looking at the last letter, since there are no next letters
+                        self.output += (
+                            converted_letter.title()
+                            if previous_letter.islower()
+                            else converted_letter.upper()
+                        )
             else:
                 self.output += char
 
@@ -38,17 +58,9 @@ class Romanizer:
         """
 
         current_dir: str = os.path.dirname(os.path.abspath(__file__))
-        concordance_file_path: str = os.path.join(current_dir, "concordance.json")
+        concordance_file_path: str = os.path.join(
+            current_dir, "data", "concordance.json"
+        )
 
         with open(concordance_file_path, "r", encoding="utf-8") as concordance_file:
             self.concordance = json.load(concordance_file)
-
-    def set_text(self, text: str) -> None:
-        """
-        Given a Ukrainian text string set it as the Romanizer's text
-
-        < text: str
-            text to set as Romanizer's text
-        """
-
-        self.text = text
