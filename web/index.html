@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      Ukrainian Latynka Preview by the Grace of Jesus Christ for the Glory of
-      GOD Almighty
+      Latynka Converter by the Grace of Jesus Christ for the Glory of our GOD
+      Almighty
     </title>
 
     <link
@@ -112,7 +112,6 @@
             output += char;
           }
         }
-
         return output;
       };
 
@@ -121,8 +120,8 @@
         document.execCommand("copy");
       };
 
-      document.querySelector("textarea").addEventListener("input", () => {
-        let input = document.querySelector("textarea").value;
+      document.querySelector("#input").addEventListener("input", () => {
+        let input = document.querySelector("#input").value;
         let output = document.querySelector("#output");
         output.value = convert(input);
       });
