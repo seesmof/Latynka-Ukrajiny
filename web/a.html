@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Ukrainian Latynka Preview by the Grace of Jesus Christ for the Glory of
+      GOD Almighty
+    </title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <main class="container w-full p-4 mx-auto md:max-w-7xl h-[77vh]">
+      <section
+        class="flex flex-col-reverse md:flex-row align-bottom gap-4 h-full"
+      >
+        <textarea
+          name="input"
+          id="input"
+          placeholder="Enter your Ukrainian cyrillic text here..."
+          class="textarea resize-none textarea-bordered flex-grow"
+        ></textarea>
+        <textarea
+          name="output"
+          id="output"
+          placeholder="Ukrainian latin text will be shown here..."
+          class="textarea resize-none textarea-bordered flex-grow"
+          disabled
+        ></textarea>
+      </section>
+      <button class="btn btn-info btn-lg w-full mt-4 text-white">Copy</button>
+    </main>
+  </body>
+</html>
