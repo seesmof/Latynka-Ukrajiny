@@ -78,3 +78,20 @@ Slava Isusu Hrystu Svjatomu Gospodu BOGU Odvičnomu Vsemogutn'omu Vsevyšn'omu n
 
 SLAVA NAVIKY BOGU JEDYNOMU ISUSU HRYSTU SVJATOMU GOSPODU
 ```
+
+### latynka info
+the romanization system was taken from Maks Prudeus: [the original video](https://youtu.be/nHeE2x2UNw4) and [a useful article](https://drukarnia.com.ua/articles/ukrayinska-latinka-maibutnye-nashoyi-krayini-ITKqx)
+
+its pretty much the system from [NaČasi](https://nachasi.com/manifest/), but
+- use `JI` in place of `Ї` 
+- use apostrophe sign in place of `Ь` and `'`
+- a different `Ĝ` in place of `Ґ`
+
+full letters concordance can be found at `./latynka/concordance.json`
+
+### use online
+the app is [freely available](https://latynka.vercel.app/) to use on the internet. it has a neat interface, glory to Jesus Christ our Holy Lord GOD Almighty, here is how it looks:
+[![praise Jesus Christ our Holy Lord GOD Almighty](https://i.imgur.com/3aZuXvO.png)](https://latynka.vercel.app/)
+
+### license
+The project is officially, fully, and permanently [released into the public domain](https://creativecommons.org/publicdomain/zero/1.0/). Any use is freely permitted.
