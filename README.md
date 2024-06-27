@@ -10,3 +10,8 @@
 contains a python library that takes in a Ukrainian text in cyrillic alphabet and converts it into latin (romanizes, makes into latynka)
 
 all by the Amazing Grace of Jesus Christ our Holy Lord GOD Almighty for His Glory ✝️💗🙏🏼
+
+##### usage example
+the main function of the library is pretty much `convert`
+
+having some input text in Ukrainian, pass 

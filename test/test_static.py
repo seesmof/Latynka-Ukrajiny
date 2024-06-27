@@ -1,5 +1,4 @@
-from latynka.helpers import convert
-from latynka.romanizer import Romanizer
+from latynka import convert, Romanizer
 
 
 def run_tests() -> None:
