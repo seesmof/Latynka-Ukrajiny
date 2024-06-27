@@ -26,8 +26,8 @@ class Romanizer:
                 converted_letter: str = self.concordance[char.lower()]
                 if char.islower():
                     self.output += converted_letter.lower()
-                elif char.isupper():
-                    # if it's not the last letter
+                else:
+                    # if it is NOT the last letter
                     if index < len(self.text) - 1:
                         # look at the next letter
                         next_letter: str = self.text[index + 1]
