@@ -33,7 +33,18 @@
           title="Click to copy"
         ></textarea>
       </section>
-      <button class="btn btn-info text-white">Copy</button>
+      <section class="flex flex-row gap-2 w-full">
+        <button class="btn btn-info text-white flex-1" id="copy_button">
+          Copy
+        </button>
+        <a
+          href="./hotkeys.html"
+          class="btn btn-accent text-white min-w-min hidden md:flex"
+          id="hotkeys_button"
+        >
+          Hotkeys
+        </a>
+      </section>
     </main>
 
     <script src="./helper.js"></script>

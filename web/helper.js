@@ -81,7 +81,7 @@ document.querySelector("#input").addEventListener("input", () => {
 });
 
 document
-  .querySelector("button")
+  .querySelector("#copy_button")
   .addEventListener("click", () => copyOutputText());
 document
   .querySelector("#output")
