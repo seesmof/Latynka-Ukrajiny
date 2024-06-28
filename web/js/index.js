@@ -34,6 +34,8 @@ const concordance = {
   я: "ja",
   "'": "'",
 };
+const input = document.querySelector("#input");
+const output = document.querySelector("#output");
 
 const convert = (text) => {
   let output = "";
@@ -70,14 +72,59 @@ const convert = (text) => {
 };
 
 const copyOutputText = () => {
-  document.querySelector("#output").select();
+  output.select();
   document.execCommand("copy");
 };
 
-document.querySelector("#input").addEventListener("input", () => {
-  let input = document.querySelector("#input").value;
-  let output = document.querySelector("#output");
-  output.value = convert(input);
+input.addEventListener("input", () => (output.value = convert(input.value)));
+
+/* on Space key press focus the #input textarea */
+document.addEventListener("keydown", (event) => {
+  if (event.key === " " && document.activeElement.id !== "input") {
+    input.focus();
+    event.preventDefault();
+  }
+});
+
+/* on Escape key press unfocus the #input textarea */
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    input.blur();
+  }
+});
+
+/* on C key press copy the #output text */
+document.addEventListener("keydown", (event) => {
+  const key_options = ["c", "C", "с", "С"];
+  if (
+    key_options.includes(event.key) &&
+    document.activeElement.id !== "input"
+  ) {
+    copyOutputText();
+  }
+});
+
+/* on X key press clear the #input textarea from text */
+document.addEventListener("keydown", (event) => {
+  const key_options = ["x", "X", "ч", "Ч"];
+  if (
+    key_options.includes(event.key) &&
+    document.activeElement.id !== "input"
+  ) {
+    input.value = "";
+    output.value = "";
+  }
+});
+
+/* on Z key press click the #hotkeys_link a tag */
+document.addEventListener("keydown", (event) => {
+  const key_options = ["z", "Z", "я", "Я"];
+  if (
+    key_options.includes(event.key) &&
+    document.activeElement.id !== "input"
+  ) {
+    document.querySelector("#hotkeys_link").click();
+  }
 });
 
 document
