@@ -37,6 +37,8 @@ const concordance = {
 const input = document.querySelector("#input");
 const output = document.querySelector("#output");
 
+const title = (text) => `${text.charAt(0).toUpperCase()}${text.slice(1)}`;
+
 const convert = (text) => {
   let output = "";
   for (let index = 0; index < text.length; index++) {
@@ -50,17 +52,13 @@ const convert = (text) => {
           const nextLetter = text.charAt(index + 1);
           output +=
             nextLetter === nextLetter.toLowerCase()
-              ? `${convertedLetter
-                  .charAt(0)
-                  .toUpperCase()}${convertedLetter.slice(1)}`
+              ? title(convertedLetter)
               : convertedLetter.toUpperCase();
         } else {
           const previousLetter = text.charAt(index - 1);
           output +=
             previousLetter === previousLetter.toLowerCase()
-              ? `${convertedLetter
-                  .charAt(0)
-                  .toUpperCase()}${convertedLetter.slice(1)}`
+              ? title(convertedLetter)
               : convertedLetter.toUpperCase();
         }
       }
