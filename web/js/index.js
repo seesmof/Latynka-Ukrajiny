@@ -75,6 +75,7 @@ const copyOutputText = () => {
 };
 
 input.addEventListener("input", () => (output.value = convert(input.value)));
+document.onload = () => (output.value = convert(input.value));
 
 /* on Space key press focus the #input textarea */
 document.addEventListener("keydown", (event) => {
